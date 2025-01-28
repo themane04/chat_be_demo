@@ -1,5 +1,7 @@
 package ch.postfinance.chatprototype.ccyp.model;
 
+import ch.postfinance.chatprototype.ccyp.model.enums.MessageStatus;
+import ch.postfinance.chatprototype.ccyp.model.enums.MessageType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,16 +21,4 @@ public class Message {
     private Map<String, Integer> reactions;
     private Long replyToMessageId;
     private boolean isEdited;
-
-    public enum MessageType {
-        CHAT,
-        JOIN,
-        LEAVE
-    }
-
-    public enum MessageStatus {
-        SENT,
-        DELIVERED,
-        READ
-    }
 }
