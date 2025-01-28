@@ -36,7 +36,7 @@ To run this application, follow these steps:
 2. Clone the repository:
 
 ```
-git@github.com:themane04/chat_be.git
+git clone https://github.com/themane04/chat_be_demo.git
 ```
 
 3. Navigate to the project directory
