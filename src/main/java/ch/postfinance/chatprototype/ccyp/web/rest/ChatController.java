@@ -2,7 +2,8 @@ package ch.postfinance.chatprototype.ccyp.web.rest;
 
 import ch.postfinance.chatprototype.ccyp.model.Message;
 import ch.postfinance.chatprototype.ccyp.model.enums.MessageType;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
@@ -10,9 +11,10 @@ import org.springframework.stereotype.Controller;
 
 import java.util.Objects;
 
-@Slf4j
 @Controller
 public class ChatController {
+    private static final Logger log = LoggerFactory.getLogger(ChatController.class);
+
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
     public Message sendMessage(Message chatMessage) {
